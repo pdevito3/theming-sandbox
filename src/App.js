@@ -26,18 +26,15 @@ function useCssVariableUpdate(themeQuery){
 
 function ThemeComponent() {  
   const [themeName, setThemeName] = useState("default")
-  const [themeKey, setThemeKey] = useState(1)
-  const themeQuery = useTheme(themeKey);
+  const themeQuery = useTheme(themeName);
   useCssVariableUpdate(themeQuery);
 
   const changeTheme = React.useCallback(
     () => {
-      if(themeName === "default"){        
-        setThemeKey(2)
+      if(themeName === "default"){     
         setThemeName("custom") 
       } 
       else{
-        setThemeKey(1)
         setThemeName("default");
       }
     },

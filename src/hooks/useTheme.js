@@ -1,15 +1,15 @@
 import { useQuery } from 'react-query';
 
-async function fetchTheme(themeId) {
-    if(themeId === 1){
+async function fetchTheme(themeName) {
+    if(themeName === "default"){
         return {
-            "themeId" : 1,
+            "themeName" : "default",
             "primary" : "red"
       };
     }
 
     return {
-        "themeId" : 2,
+        "themeName" : "custom",
         "primary" : "blue"
     };
 }
