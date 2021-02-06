@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
 function App() {
+  const [themeName, setThemeName] = useState("red")
+
+  const changeTheme = React.useCallback(
+    () => {
+      let root = document.documentElement;
+
+      if(themeName === "red"){        
+        root.style.setProperty('--primary', "blue");
+        setThemeName("blue") 
+      } 
+      else{
+        root.style.setProperty('--primary', "red");
+        setThemeName("red");
+      }
+    },
+    [themeName],
+  )
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p className="primary">
+        {themeName}
+      </p>
+      <button onClick={() => changeTheme()}>
+        change theme
+      </button>
     </div>
   );
 }
