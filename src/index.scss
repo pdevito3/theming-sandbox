@@ -1,7 +1,24 @@
 :root {
-  --primary: red;
+  // themable
+  --bannerBg: #105270;
+  --bannerFi: #fff;
+  --bannerContent: #00A694;
+
+  // calculated
+
+
+  // static
+
 }
 
-.primary {
-  color: var(--primary)
+.bannerBg {
+  background-color: var(--bannerBg)
+}
+
+.bannerFi {
+  color: var(--bannerFi)
+}
+
+.bannerContent {
+  color: var(--bannerContent)
 }
