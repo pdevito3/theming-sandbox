@@ -1,24 +1,86 @@
+// https://xd.adobe.com/view/974a7f3f-3b0b-4014-a025-232ed670208c-c219/screen/3f5e3a7e-b266-4360-a04b-c992244f553e/specs/
+
 :root {
-  // themable
-  --bannerBg: #105270;
-  --bannerFi: #fff;
-  --bannerContent: #00A694;
+  // THEMABLE
+  --navBg: #105270; //nav seems to make more contextual sense than banner (sidebar, navbar, zone hader)
+  --navFi: #fff;
+  --navContent: #00A694;
+  
+  --contentPrimaryBg: #fff;
+  --contentPrimaryFi: #1A3040;
+  --contentSecondaryBg: #F2F4F5;
+  --contentSecondaryFi: #1A3040;
 
-  // calculated
+  --accentBg: #6E96A8;
+  --accentFi: #fff;
+
+  --hyperlink: #21A4DF;
+  --selectedBg: #B6E0CF;
+  
+  // CALCULATED -- might need these to start as something meah (or nothing) and then get calculated in a 
+  // complex manner in JS and updated like the theme, though these will need to update with the theme regardless, so maybe they always get updated by a js calc
+  // --navBgShadowDark: brightness(0) saturate(100%) invert(12%) sepia(69%) saturate(600%) hue-rotate(70deg) brightness(94%) contrast(105%);
+  // --navBgActive
+  // --navBgFocused
+  
 
 
-  // static
+  // STATIC
+  // *******what i want to focus on is maintainability. if we were to change something later, 
+  // *******does changing it here mean that everything using it should change to that new value
 
+  // e.g. say we want to:
+  // 1) change the color of alert banner. 
+  //      with context names, that really easy and we know where to go, but something else could be 
+  //      using that value even though it isn't a banner. with utility based names, you just make new utilities and update the banner 
+  //      in the component as that's the source of truth that we care about
+  // 2) we come up with a whole new color palette and want to change the portal to match
+  //      with context naming, you have to know that everything that uses that variable wants to be updated to that color. this is very unlikely
+  //      with a utility based approach, you make a new set of utilities and update everything to point to the right utility. 
+  //      regardless, not trivial, but not really a good way to arcitect this to be nontrivial for an ask like this
+
+  --banner-error-bg: #F57976;
+  --banner-error-border: #D26C69;  
+  --banner-error-fi: #AD2C29;
+  --banner-warning-bg: #FFEBA6;
+  --banner-warning-border: #D5C89B;  
+  --banner-warning-fi: #937A24;
+  --banner-info-bg: #B8DCF5;
+  --banner-info-border: #8FB6D1;  
+  --banner-info-fi: #3C749B;
+  --banner-success-bg: #BAF4BC;
+  --banner-success-border: #94D396;  
+  --banner-success-fi: #309233;
+  --heart: #FF7474;
+  // --goldenRecord: 
+
+  --red300: #F57976; //error-bg
+  --red350: #FF7474; //heart
+  --red400: #D26C69; //error-border
+  --red700: #AD2C29; // error-fi
+  --yellow300: #FFEBA6;
+  --yellow400: #D5C89B;  
+  --yellow700: #937A24;
+  // --yellowXXX -- use this for golden record
+  --blue300: #B8DCF5;
+  --blue400: #8FB6D1;  
+  --blue700: #3C749B;
+  --green300: #BAF4BC;
+  --green400: #94D396;  
+  --green700: #309233;
+  --white: #fff; // banner-close-background
+  --gray400: #B5B5B5; // banner-close-icon
+  // overlay gray -- no shadow here
 }
 
-.bannerBg {
-  background-color: var(--bannerBg)
+.navBg {
+  background-color: var(--navBg)
 }
 
-.bannerFi {
-  color: var(--bannerFi)
+.navFi {
+  color: var(--navFi)
 }
 
-.bannerContent {
-  color: var(--bannerContent)
+.navContent {
+  color: var(--navContent)
 }

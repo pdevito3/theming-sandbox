@@ -4,17 +4,17 @@ async function fetchTheme(themeName) {
     if(themeName === "default"){
         return {
             "themeName" : "default",
-            "bannerBg": "#105270",
-            "bannerFi": "#fff",
-            "bannerContent": "#00A694",
+            "navBg": "#105270",
+            "navFi": "#fff",
+            "navContent": "#00A694",
       };
     }
 
     return {
         "themeName" : "custom",
-        "bannerBg": "red",
-        "bannerFi": "yellow",
-        "bannerContent": "pink",
+        "navBg": "red",
+        "navFi": "yellow",
+        "navContent": "pink",
     };
 }
 
