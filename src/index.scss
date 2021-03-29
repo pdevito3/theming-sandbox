@@ -1,5 +1,11 @@
 // https://xd.adobe.com/view/974a7f3f-3b0b-4014-a025-232ed670208c-c219/screen/3f5e3a7e-b266-4360-a04b-c992244f553e/specs/
 
+
+/*
+*********Change these to RGB like so ` --contentPrimaryBg: 255 255 255;` so we can reference like this `color: rgba(var(--contentPrimaryBg),1)` for opacity flexibility
+*/
+
+
 :root {
   // THEMABLE
   --navBg: #105270; //nav seems to make more contextual sense than banner (sidebar, navbar, zone hader)
@@ -73,6 +79,8 @@
   // overlay gray -- no shadow here
 }
 
+
+// the actual implentations should all be outside of this file! this only holds the values
 .navBg {
   background-color: var(--navBg)
 }
