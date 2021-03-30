@@ -2,19 +2,22 @@ import { useQuery } from 'react-query';
 
 async function fetchTheme(themeName) {
     if(themeName === "default"){
-        return {
-            "themeName" : "default",
-            "navBg": "#105270",
-            "navFi": "#fff",
-            "navContent": "#00A694",
-      };
+      let theme = {
+        "themeName" : "default",
+        "navBg": "16, 82, 112",
+        "navFi": "0,0,0",
+        "navContent": "0, 166, 148",
+      };  
+
+
+      return theme;
     }
 
     return {
         "themeName" : "custom",
-        "navBg": "red",
-        "navFi": "yellow",
-        "navContent": "pink",
+        "navBg": "255, 0, 0",
+        "navFi": "255,255,0",
+        "navContent": "255,182,193",
     };
 }
 

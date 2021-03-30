@@ -8,20 +8,20 @@
 
 :root {
   // THEMABLE
-  --navBg: #105270; //nav seems to make more contextual sense than banner (sidebar, navbar, zone hader)
-  --navFi: #fff;
-  --navContent: #00A694;
+  --navBg: 16, 82, 112; // #105270; //nav seems to make more contextual sense than banner (sidebar, navbar, zone hader)
+  --navFi: 0, 0, 0; //#fff;
+  --navContent: 0, 166, 148; //#00A694;
   
-  --contentPrimaryBg: #fff;
-  --contentPrimaryFi: #1A3040;
-  --contentSecondaryBg: #F2F4F5;
-  --contentSecondaryFi: #1A3040;
+  --contentPrimaryBg: 0, 0, 0; //#fff;
+  --contentPrimaryFi: 26, 48, 64; //#1A3040;
+  --contentSecondaryBg: 242, 244, 245; //#F2F4F5;
+  --contentSecondaryFi: 26, 48, 64; //#1A3040;
 
-  --accentBg: #6E96A8;
-  --accentFi: #fff;
+  --accentBg: 110, 150, 168; //#6E96A8;
+  --accentFi: 0, 0, 0; //#fff;
 
-  --hyperlink: #21A4DF;
-  --selectedBg: #B6E0CF;
+  --hyperlink: 33, 164, 223; //#21A4DF;
+  --selectedBg: 182, 224, 207; //#B6E0CF;
   
   // CALCULATED -- might need these to start as something meah (or nothing) and then get calculated in a 
   // complex manner in JS and updated like the theme, though these will need to update with the theme regardless, so maybe they always get updated by a js calc
@@ -33,7 +33,7 @@
 
   // STATIC
   // *******what i want to focus on is maintainability. if we were to change something later, 
-  // *******does changing it here mean that everything using it should change to that new value
+  //        does changing it here mean that everything using it should change to that new value
 
   // e.g. say we want to:
   // 1) change the color of alert banner. 
@@ -82,13 +82,58 @@
 
 // the actual implentations should all be outside of this file! this only holds the values
 .navBg {
-  background-color: var(--navBg)
+  background-color: rgba(var(--navBg), 1);
 }
 
 .navFi {
-  color: var(--navFi)
+  color: rgba(var(--navFi))
 }
 
 .navContent {
-  color: var(--navContent)
+  color: rgba(var(--navContent))
+}
+
+.iconButton {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  padding: 8px;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(var(--navBg), 1);
+  border-radius: 0.375rem;
+  box-shadow: 1px 1px 1px #00000029, -1px -1px 1px #FFFFFF47;
+}
+
+.iconButton:hover {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  background-color: rgba(var(--navBg), 1);
+  cursor: pointer;
+}
+
+.iconButton:active {
+  outline: none;
+  border: none;
+  background-color: rgba(var(--navBg), .75);
+}
+
+.iconButton:focus {
+  outline: 0;
+  background-color: rgba(var(--navBg), .75);
+}
+
+.p3 {
+  margin-top: 5px;
+  padding: 12px;
+  background-color: rgba(var(--navBg), 1);
+}
+
+.svg {
+  width: 12px;
+  height: 12px;
 }
