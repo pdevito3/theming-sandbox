@@ -25,9 +25,16 @@
   
   // CALCULATED -- might need these to start as something meah (or nothing) and then get calculated in a 
   // complex manner in JS and updated like the theme, though these will need to update with the theme regardless, so maybe they always get updated by a js calc
-  // --navBgShadowDark: brightness(0) saturate(100%) invert(12%) sepia(69%) saturate(600%) hue-rotate(70deg) brightness(94%) contrast(105%);
-  // --navBgActive
-  // --navBgFocused
+  --navBg50: 0;
+  --navBg100: 0;
+  --navBg200: 0;
+  --navBg300: 0;
+  --navBg400: 0;
+  --navBg500: 0;
+  --navBg600: 0;
+  --navBg700: 0;
+  --navBg800: 0;
+  --navBg900: 0;
   
 
 
@@ -44,6 +51,8 @@
   //      with context naming, you have to know that everything that uses that variable wants to be updated to that color. this is very unlikely
   //      with a utility based approach, you make a new set of utilities and update everything to point to the right utility. 
   //      regardless, not trivial, but not really a good way to arcitect this to be nontrivial for an ask like this
+
+  // design team and i want to do utility based names so we don't have to worry about coming up with some friendly name and we can maintain teh system more easily
 
   --banner-error-bg: #F57976;
   --banner-error-border: #D26C69;  
@@ -92,6 +101,116 @@
 .navContent {
   color: rgba(var(--navContent))
 }
+
+.flex {
+  display: flex;
+}
+
+.navBg50 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg50))
+}
+.navBg100 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg100))
+}
+.navBg200 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg200))
+}
+.navBg300 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg300))
+}
+.navBg400 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg400))
+}
+.navBg500 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg500))
+}
+.navBg600 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg600))
+}
+.navBg700 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg700))
+}
+.navBg800 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg800))
+}
+.navBg900 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navBg900))
+}
+
+
+.navContent50 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent50))
+}
+.navContent100 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent100))
+}
+.navContent200 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent200))
+}
+.navContent300 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent300))
+}
+.navContent400 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent400))
+}
+.navContent500 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent500))
+}
+.navContent600 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent600))
+}
+.navContent700 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent700))
+}
+.navContent800 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent800))
+}
+.navContent900 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(var(--navContent900))
+}
+
+
+
 
 .iconButton {
   background: transparent;

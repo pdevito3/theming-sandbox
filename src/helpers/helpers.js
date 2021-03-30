@@ -8,7 +8,7 @@ export function luminanceFromRGB(r, g, b) {
 }
 
 export function luminanceFromHex(H) {
-  return luminanceFromRGB(...Object.values(hexToRGB(H)));
+  return luminanceFromRGB(...Object.values(hexAsRgb(H)));
 }
 
 export function lightnessFromHSLum(H, S, Lum) {
@@ -32,7 +32,26 @@ export function lightnessFromHSLum(H, S, Lum) {
   return newL;
 }
 
-export function hexToRGB(H) {
+export function hexToRgb(hex, type = "string") {
+  // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+    return r + r + g + g + b + b;
+  });
+
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  if(type === "array")
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+
+  return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : null;
+  
+}
+
+function hexAsRgb(H) {
   let r = 0;
   let g = 0;
   let b = 0;
@@ -50,7 +69,7 @@ export function hexToRGB(H) {
 
 export function hexToHSL(H) {
   // Convert hex to RGB first
-  let { r, g, b } = hexToRGB(H);
+  let { r, g, b } = hexAsRgb(H);
   // Then to HSL
   r /= 255;
   g /= 255;
@@ -149,4 +168,19 @@ export function isHex(value) {
 export function round(value, precision) {
   const multiplier = Math.pow(10, precision || 0);
   return Math.round(value * multiplier) / multiplier;
+}
+
+function rgbComponentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length === 1 ? "0" + hex : hex;
+}
+
+export function rgbToHex(rgbString) {
+  const rgbArr = rgbString.split(',');
+  
+  const r = parseInt(rgbArr[0]);
+  const g = parseInt(rgbArr[1]);
+  const b = parseInt(rgbArr[2]);
+
+  return `#${rgbComponentToHex(r)}${rgbComponentToHex(g)}${rgbComponentToHex(b)}`;
 }

@@ -14,8 +14,7 @@ import {
     lightnessFromHSLum,
   } from '../helpers/helpers.js';
 
-export default function useColorPalette(hex) {  
-    useEffect(() => {
+export default function generateColorPalette(hex) {  
       const newPalette = {};
 
         const tweakHue = 0;
@@ -55,7 +54,6 @@ export default function useColorPalette(hex) {
             ? distributionScale[i].tweak
             : lightnessFromHSLum(newH, newS, distributionScale[i].tweak);
   
-            console.log({newH, newS, newL});
           const newHex = HSLToHex(newH, newS, newL);
           const paletteI = key;
   
@@ -72,6 +70,6 @@ export default function useColorPalette(hex) {
         });
   
         console.log(newPalette);
+        return newPalette;
       }
-    })
 };
