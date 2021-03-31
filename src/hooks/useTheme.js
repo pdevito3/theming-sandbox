@@ -15,9 +15,9 @@ async function fetchTheme(themeName) {
 
     return {
         "themeName" : "custom",
-        "navBg": "255, 0, 0",
-        "navFi": "255,255,0",
-        "navContent": "255,182,193",
+        "navBg": "239, 68, 68",
+        "navFi": "245, 158, 11",
+        "navContent": "128,0,128",
     };
 }
 
