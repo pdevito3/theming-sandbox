@@ -2,175 +2,175 @@
 
 // the actual implentations should all be in the component scss module files (or tw if possible)!
 
-.navBg {
-    background-color: rgba(var(--navBg), 1);
+.bannerPrimary {
+    background-color: rgba(var(--bannerPrimary), 1);
   }
   
-  .navFi {
-    color: rgba(var(--navFi))
+  .bannerFi {
+    color: rgba(var(--bannerFi))
   }
   
-  .navContent {
-    color: rgba(var(--navContent))
+  .bannerSecondary {
+    color: rgba(var(--bannerSecondary))
   }
   
   .flex {
     display: flex;
   }
   
-  .navBg50 {
+  .bannerPrimary50 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg50))
+    background-color: rgba(var(--bannerPrimary50))
   }
-  .navBg100 {
+  .bannerPrimary100 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg100))
+    background-color: rgba(var(--bannerPrimary100))
   }
-  .navBg200 {
+  .bannerPrimary200 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg200))
+    background-color: rgba(var(--bannerPrimary200))
   }
-  .navBg300 {
+  .bannerPrimary300 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg300))
+    background-color: rgba(var(--bannerPrimary300))
   }
-  .navBg400 {
+  .bannerPrimary400 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg400))
+    background-color: rgba(var(--bannerPrimary400))
   }
-  .navBg500 {
+  .bannerPrimary500 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg500))
+    background-color: rgba(var(--bannerPrimary500))
   }
-  .navBg600 {
+  .bannerPrimary600 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg600))
+    background-color: rgba(var(--bannerPrimary600))
   }
-  .navBg700 {
+  .bannerPrimary700 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg700))
+    background-color: rgba(var(--bannerPrimary700))
   }
-  .navBg800 {
+  .bannerPrimary800 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg800))
+    background-color: rgba(var(--bannerPrimary800))
   }
-  .navBg900 {
+  .bannerPrimary900 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navBg900))
-  }
-  
-  
-  .navContent50 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent50))
-  }
-  .navContent100 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent100))
-  }
-  .navContent200 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent200))
-  }
-  .navContent300 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent300))
-  }
-  .navContent400 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent400))
-  }
-  .navContent500 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent500))
-  }
-  .navContent600 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent600))
-  }
-  .navContent700 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent700))
-  }
-  .navContent800 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent800))
-  }
-  .navContent900 {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--navContent900))
+    background-color: rgba(var(--bannerPrimary900))
   }
   
   
-  .navFi50 {
+  .bannerSecondary50 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi50))
+    background-color: rgba(var(--bannerSecondary50))
   }
-  .navFi100 {
+  .bannerSecondary100 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi100))
+    background-color: rgba(var(--bannerSecondary100))
   }
-  .navFi200 {
+  .bannerSecondary200 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi200))
+    background-color: rgba(var(--bannerSecondary200))
   }
-  .navFi300 {
+  .bannerSecondary300 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi300))
+    background-color: rgba(var(--bannerSecondary300))
   }
-  .navFi400 {
+  .bannerSecondary400 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi400))
+    background-color: rgba(var(--bannerSecondary400))
   }
-  .navFi500 {
+  .bannerSecondary500 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi500))
+    background-color: rgba(var(--bannerSecondary500))
   }
-  .navFi600 {
+  .bannerSecondary600 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi600))
+    background-color: rgba(var(--bannerSecondary600))
   }
-  .navFi700 {
+  .bannerSecondary700 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi700))
+    background-color: rgba(var(--bannerSecondary700))
   }
-  .navFi800 {
+  .bannerSecondary800 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi800))
+    background-color: rgba(var(--bannerSecondary800))
   }
-  .navFi900 {
+  .bannerSecondary900 {
     width: 50px;
     height: 50px;
-    background-color: rgba(var(--navFi900))
+    background-color: rgba(var(--bannerSecondary900))
+  }
+  
+  
+  .bannerFi50 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi50))
+  }
+  .bannerFi100 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi100))
+  }
+  .bannerFi200 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi200))
+  }
+  .bannerFi300 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi300))
+  }
+  .bannerFi400 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi400))
+  }
+  .bannerFi500 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi500))
+  }
+  .bannerFi600 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi600))
+  }
+  .bannerFi700 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi700))
+  }
+  .bannerFi800 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi800))
+  }
+  .bannerFi900 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--bannerFi900))
   }
   
   .iconButton {
@@ -182,7 +182,7 @@
     appearance: none;
     height: 20px;
     width: 20px;
-    background-color: rgba(var(--navBg), 1);
+    background-color: rgba(var(--bannerPrimary), 1);
     border-radius: 0.375rem;
   }
   
@@ -191,7 +191,7 @@
   }
   
   .iconShadowTheme {
-    box-shadow: 1px 1px 1px rgb(var(--navBg700)), -1px -1px 1px rgba(var(--navBg400));
+    box-shadow: 1px 1px 1px rgb(var(--bannerPrimary700)), -1px -1px 1px rgba(var(--bannerPrimary400));
   }
   
   .iconButton:hover {
@@ -199,25 +199,25 @@
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
-    background-color: rgba(var(--navBg), 1);
+    background-color: rgba(var(--bannerPrimary), 1);
     cursor: pointer;
   }
   
   .iconButton:active {
     outline: none;
     border: none;
-    background-color: rgba(var(--navBg), .75);
+    background-color: rgba(var(--bannerPrimary), .75);
   }
   
   .iconButton:focus {
     outline: 0;
-    background-color: rgba(var(--navBg), .75);
+    background-color: rgba(var(--bannerPrimary), .75);
   }
   
   .p3 {
     margin-top: 5px;
     padding: 12px;
-    background-color: rgba(var(--navBg), 1);
+    background-color: rgba(var(--bannerPrimary), 1);
   }
   
   .svg {

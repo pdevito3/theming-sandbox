@@ -19,7 +19,7 @@ function App() {
 
 function UpdatePaletteCss(baseHex, cssVarName, documentRoot){
   let palette = generateColorPalette(rgbToHex(baseHex));
-  // root.style.setProperty("navBg50", "newval"); /***** 50 is broken. I have a ticket in with the library creator
+  // root.style.setProperty("bannerPrimary50", "newval"); /***** 50 is broken. I have a ticket in with the library creator
   documentRoot.style.setProperty(`--${cssVarName}100`, hexToRgb(palette["100"].hex));
   documentRoot.style.setProperty(`--${cssVarName}200`, hexToRgb(palette["200"].hex));
   documentRoot.style.setProperty(`--${cssVarName}300`, hexToRgb(palette["300"].hex));
@@ -36,14 +36,14 @@ function useCssVariableUpdate(themeQuery){
     let root = document.documentElement;
     
     if(themeQuery.isSuccess){
-      root.style.setProperty('--navBg', themeQuery.data.navBg);
-      root.style.setProperty('--navFi', themeQuery.data.navFi);
-      root.style.setProperty('--navContent', themeQuery.data.navContent);
+      root.style.setProperty('--bannerPrimary', themeQuery.data.bannerPrimary);
+      root.style.setProperty('--bannerFi', themeQuery.data.bannerFi);
+      root.style.setProperty('--bannerSecondary', themeQuery.data.bannerSecondary);
 
       // calculate values:
-      UpdatePaletteCss( themeQuery.data.navBg, "navBg", root);
-      UpdatePaletteCss( themeQuery.data.navFi, "navFi", root);
-      UpdatePaletteCss( themeQuery.data.navContent, "navContent", root);
+      UpdatePaletteCss( themeQuery.data.bannerPrimary, "bannerPrimary", root);
+      UpdatePaletteCss( themeQuery.data.bannerFi, "bannerFi", root);
+      UpdatePaletteCss( themeQuery.data.bannerSecondary, "bannerSecondary", root);
     }
   }, [themeQuery])
 }
@@ -67,7 +67,7 @@ function ThemeComponent() {
 
   return (
     <div className="">
-      <p className="navBg navFi">
+      <p className="bannerPrimary bannerFi">
         {
           themeQuery.isLoading ? "Loading..." : ""
         }
@@ -75,7 +75,7 @@ function ThemeComponent() {
           themeQuery.isSuccess ? "test" : ""
         }
       </p>
-      <button className="navContent" onClick={() => changeTheme()}>
+      <button className="bannerSecondary" onClick={() => changeTheme()}>
         change theme to {themeName === "default" ? "custom" : "default"}
       </button>
       <div className="p3">
@@ -89,37 +89,37 @@ function ThemeComponent() {
         </button>
       </div>
       <div className="flex">
-        <div className="navBg100">{}</div>
-        <div className="navBg200">{}</div>
-        <div className="navBg300">{}</div>
-        <div className="navBg400">{}</div>
-        <div className="navBg500">{}</div>
-        <div className="navBg600">{}</div>
-        <div className="navBg700">{}</div>
-        <div className="navBg800">{}</div>
-        <div className="navBg900">{}</div>
+        <div className="bannerPrimary100">{}</div>
+        <div className="bannerPrimary200">{}</div>
+        <div className="bannerPrimary300">{}</div>
+        <div className="bannerPrimary400">{}</div>
+        <div className="bannerPrimary500">{}</div>
+        <div className="bannerPrimary600">{}</div>
+        <div className="bannerPrimary700">{}</div>
+        <div className="bannerPrimary800">{}</div>
+        <div className="bannerPrimary900">{}</div>
       </div>
       <div className="flex">
-        <div className="navFi100">{}</div>
-        <div className="navFi200">{}</div>
-        <div className="navFi300">{}</div>
-        <div className="navFi400">{}</div>
-        <div className="navFi500">{}</div>
-        <div className="navFi600">{}</div>
-        <div className="navFi700">{}</div>
-        <div className="navFi800">{}</div>
-        <div className="navFi900">{}</div>
+        <div className="bannerFi100">{}</div>
+        <div className="bannerFi200">{}</div>
+        <div className="bannerFi300">{}</div>
+        <div className="bannerFi400">{}</div>
+        <div className="bannerFi500">{}</div>
+        <div className="bannerFi600">{}</div>
+        <div className="bannerFi700">{}</div>
+        <div className="bannerFi800">{}</div>
+        <div className="bannerFi900">{}</div>
       </div>
       <div className="flex">
-        <div className="navContent100">{}</div>
-        <div className="navContent200">{}</div>
-        <div className="navContent300">{}</div>
-        <div className="navContent400">{}</div>
-        <div className="navContent500">{}</div>
-        <div className="navContent600">{}</div>
-        <div className="navContent700">{}</div>
-        <div className="navContent800">{}</div>
-        <div className="navContent900">{}</div>
+        <div className="bannerSecondary100">{}</div>
+        <div className="bannerSecondary200">{}</div>
+        <div className="bannerSecondary300">{}</div>
+        <div className="bannerSecondary400">{}</div>
+        <div className="bannerSecondary500">{}</div>
+        <div className="bannerSecondary600">{}</div>
+        <div className="bannerSecondary700">{}</div>
+        <div className="bannerSecondary800">{}</div>
+        <div className="bannerSecondary900">{}</div>
       </div>
     </div>
   )

@@ -4,9 +4,9 @@ async function fetchTheme(themeName) {
     if(themeName === "default"){
       let theme = {
         "themeName" : "default",
-        "navBg": "16, 82, 112",
-        "navFi": "0,0,0",
-        "navContent": "0, 166, 148",
+        "bannerPrimary": "16, 82, 112",
+        "bannerFi": "0,0,0",
+        "bannerSecondary": "0, 166, 148",
       };  
 
 
@@ -15,9 +15,9 @@ async function fetchTheme(themeName) {
 
     return {
         "themeName" : "custom",
-        "navBg": "239, 68, 68",
-        "navFi": "245, 158, 11",
-        "navContent": "128,0,128",
+        "bannerPrimary": "239, 68, 68",
+        "bannerFi": "245, 158, 11",
+        "bannerSecondary": "128,0,128",
     };
 }
 
