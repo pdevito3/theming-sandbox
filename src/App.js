@@ -88,55 +88,39 @@ function ThemeComponent() {
       {colors.map((color) => {
         return (
           <div>
-            <p>{color}</p>
+            <p className="pt-3 pb-1 font-semibold text-xs">{color}</p>
             <div key={color} className="flex">
-              <div className={`${color}100`}>{}</div>
-              <div className={`${color}200`}>{}</div>
-              <div className={`${color}300`}>{}</div>
-              <div className={`${color}400`}>{}</div>
-              <div className={`${color}500`}>{}</div>
-              <div className={`${color}600`}>{}</div>
-              <div className={`${color}700`}>{}</div>
-              <div className={`${color}800`}>{}</div>
-              <div className={`${color}900`}>{}</div>
+              <div className={`${color}100 w-20 h-20`}>
+                <p className="text-xs p-1">100</p>  
+              </div>
+              <div className={`${color}200 w-20 h-20`}>
+                <p className="text-xs p-1">200</p>  
+              </div>
+              <div className={`${color}300 w-20 h-20`}>
+                <p className="text-xs p-1">300</p>  
+              </div>
+              <div className={`${color}400 w-20 h-20`}>
+                <p className="text-xs p-1">400</p>  
+              </div>
+              <div className={`${color}500 w-20 h-20`}>
+                <p className="text-xs p-1">500</p>  
+              </div>
+              <div className={`${color}600 w-20 h-20`}>
+                <p className="text-xs p-1">600</p>  
+              </div>
+              <div className={`${color}700 w-20 h-20`}>
+                <p className="text-xs p-1">700</p>  
+              </div>
+              <div className={`${color}800 w-20 h-20`}>
+                <p className="text-xs p-1">800</p>  
+              </div>
+              <div className={`${color}900 w-20 h-20`}>
+                <p className="text-xs p-1">900</p>  
+              </div>
             </div>
           </div>
         )
       })}
-
-      {/* <div className="flex">
-        <div className="bannerPrimary100">{}</div>
-        <div className="bannerPrimary200">{}</div>
-        <div className="bannerPrimary300">{}</div>
-        <div className="bannerPrimary400">{}</div>
-        <div className="bannerPrimary500">{}</div>
-        <div className="bannerPrimary600">{}</div>
-        <div className="bannerPrimary700">{}</div>
-        <div className="bannerPrimary800">{}</div>
-        <div className="bannerPrimary900">{}</div>
-      </div>
-      <div className="flex">
-        <div className="bannerFi100">{}</div>
-        <div className="bannerFi200">{}</div>
-        <div className="bannerFi300">{}</div>
-        <div className="bannerFi400">{}</div>
-        <div className="bannerFi500">{}</div>
-        <div className="bannerFi600">{}</div>
-        <div className="bannerFi700">{}</div>
-        <div className="bannerFi800">{}</div>
-        <div className="bannerFi900">{}</div>
-      </div>
-      <div className="flex">
-        <div className="bannerSecondary100">{}</div>
-        <div className="bannerSecondary200">{}</div>
-        <div className="bannerSecondary300">{}</div>
-        <div className="bannerSecondary400">{}</div>
-        <div className="bannerSecondary500">{}</div>
-        <div className="bannerSecondary600">{}</div>
-        <div className="bannerSecondary700">{}</div>
-        <div className="bannerSecondary800">{}</div>
-        <div className="bannerSecondary900">{}</div>
-      </div> */}
     </div>
   )
 }

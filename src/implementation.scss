@@ -1,3 +1,5 @@
+@tailwind base;
+@tailwind components;
 
 
 // the actual implentations should all be in the component scss module files (or tw if possible)!
@@ -642,3 +644,5 @@
     width: 12px;
     height: 12px;
   }
+
+  @tailwind utilities;
