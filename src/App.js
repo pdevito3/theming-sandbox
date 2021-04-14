@@ -5,6 +5,7 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { hexToRgb, rgbToHex } from './helpers/helpers.js';
 
+const colors = ["bannerPrimary","bannerFi","bannerSecondary","contentPrimaryBg","contentPrimaryFi","contentSecondaryBg","contentSecondaryFi","accentBg","accentFi","selectedBg","hyperlink"];
 
 function App() {
   const queryClient = new QueryClient()
@@ -36,14 +37,9 @@ function useCssVariableUpdate(themeQuery){
     let root = document.documentElement;
     
     if(themeQuery.isSuccess){
-      root.style.setProperty('--bannerPrimary', themeQuery.data.bannerPrimary);
-      root.style.setProperty('--bannerFi', themeQuery.data.bannerFi);
-      root.style.setProperty('--bannerSecondary', themeQuery.data.bannerSecondary);
-
-      // calculate values:
-      UpdatePaletteCss( themeQuery.data.bannerPrimary, "bannerPrimary", root);
-      UpdatePaletteCss( themeQuery.data.bannerFi, "bannerFi", root);
-      UpdatePaletteCss( themeQuery.data.bannerSecondary, "bannerSecondary", root);
+      colors.map((color) => {
+        return UpdatePaletteCss( themeQuery.data[color], color, root);
+      });
     }
   }, [themeQuery])
 }
@@ -88,7 +84,27 @@ function ThemeComponent() {
         {/* <svg className="svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg> */}
         </button>
       </div>
-      <div className="flex">
+
+      {colors.map((color) => {
+        return (
+          <div>
+            <p>{color}</p>
+            <div key={color} className="flex">
+              <div className={`${color}100`}>{}</div>
+              <div className={`${color}200`}>{}</div>
+              <div className={`${color}300`}>{}</div>
+              <div className={`${color}400`}>{}</div>
+              <div className={`${color}500`}>{}</div>
+              <div className={`${color}600`}>{}</div>
+              <div className={`${color}700`}>{}</div>
+              <div className={`${color}800`}>{}</div>
+              <div className={`${color}900`}>{}</div>
+            </div>
+          </div>
+        )
+      })}
+
+      {/* <div className="flex">
         <div className="bannerPrimary100">{}</div>
         <div className="bannerPrimary200">{}</div>
         <div className="bannerPrimary300">{}</div>
@@ -120,7 +136,7 @@ function ThemeComponent() {
         <div className="bannerSecondary700">{}</div>
         <div className="bannerSecondary800">{}</div>
         <div className="bannerSecondary900">{}</div>
-      </div>
+      </div> */}
     </div>
   )
 }

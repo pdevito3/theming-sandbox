@@ -1,98 +1,51 @@
 // https://xd.adobe.com/view/974a7f3f-3b0b-4014-a025-232ed670208c-c219/screen/3f5e3a7e-b266-4360-a04b-c992244f553e/specs/
 
-
-/*
-*********Change these to RGB like so ` --contentPrimaryBg: 255 255 255;` so we can reference like this `color: rgba(var(--contentPrimaryBg),1)` for opacity flexibility
-*/
-
-
 :root {
   /*#region Themable Values*/
   // these are the css variables that corespond directly to the configurable theming values that the end user can control
 
-  --bannerPrimary: 16, 82, 112; // #105270; //nav seems to make more contextual sense than banner (sidebar, navbar, zone hader)
-  --bannerFi: 0, 0, 0; //#fff;
-  --bannerSecondary: 0, 166, 148; //#00A694;
+  --bannerPrimary: 255, 255, 255;
+  --bannerFi: 27, 49, 65;
+  --bannerSecondary: 0, 250, 221;
   
-  --contentPrimaryBg: 0, 0, 0; //#fff;
-  --contentPrimaryFi: 26, 48, 64; //#1A3040;
-  --contentSecondaryBg: 242, 244, 245; //#F2F4F5;
-  --contentSecondaryFi: 26, 48, 64; //#1A3040;
+  --contentPrimaryBg: 255, 255, 255;
+  --contentPrimaryFi: 27, 49 ,65;
+  --contentSecondaryBg: 242, 244, 245;
+  --contentSecondaryFi: 27, 49, 65;
 
-  --accentBg: 110, 150, 168; //#6E96A8;
-  --accentFi: 0, 0, 0; //#fff;
+  --accentBg: 19, 97, 134;
+  --accentFi: 255, 255, 255;
 
-  --hyperlink: 33, 164, 223; //#21A4DF;
-  --selectedBg: 182, 224, 207; //#B6E0CF;  
+  --selectedBg: 211, 237, 249;
+  --hyperlink: 33, 164, 223;
 
-/*#endregion */
-
-
-/*#region Calculated Values*/
-  // these css variables are calculated based on their corresponding base color 
-  // (e.g. bannerFi would create a palette of calculated bannerFi colors)
-
-  --bannerPrimary50: 0;
-  --bannerPrimary100: 0;
-  --bannerPrimary200: 0;
-  --bannerPrimary300: 0;
-  --bannerPrimary400: 0;
-  --bannerPrimary500: 0;
-  --bannerPrimary600: 0;
-  --bannerPrimary700: 0;
-  --bannerPrimary800: 0;
-  --bannerPrimary900: 0;
-
-/*#endregion */
+  /*#endregion */
 
 
+  /*#region Calculated Values*/
+  
+  // --bannerPrimary50: 0;
+  // --bannerPrimary100: 0;
+  // --bannerPrimary200: 0;
+  // --bannerPrimary300: 0;
+  // --bannerPrimary400: 0;
+  // --bannerPrimary500: 0;
+  // --bannerPrimary600: 0;
+  // --bannerPrimary700: 0;
+  // --bannerPrimary800: 0;
+  // --bannerPrimary900: 0;
 
-  // STATIC
-  // *******what i want to focus on is maintainability. if we were to change something later, 
-  //        does changing it here mean that everything using it should change to that new value
+  /*#endregion */
 
-  // e.g. say we want to:
-  // 1) change the color of alert banner. 
-  //      with context names, that really easy and we know where to go, but something else could be 
-  //      using that value even though it isn't a banner. with utility based names, you just make new utilities and update the banner 
-  //      in the component as that's the source of truth that we care about
-  // 2) we come up with a whole new color palette and want to change the portal to match
-  //      with context naming, you have to know that everything that uses that variable wants to be updated to that color. this is very unlikely
-  //      with a utility based approach, you make a new set of utilities and update everything to point to the right utility. 
-  //      regardless, not trivial, but not really a good way to arcitect this to be nontrivial for an ask like this
+  
+  /*#region Static Values*/
+  
+  // red palette
+  // green palette
+  // blue palette
+  // gray palette
 
-  // design team and i want to do utility based names so we don't have to worry about coming up with some friendly name and we can maintain teh system more easily
-
-  --banner-error-bg: #F57976;
-  --banner-error-border: #D26C69;  
-  --banner-error-fi: #AD2C29;
-  --banner-warning-bg: #FFEBA6;
-  --banner-warning-border: #D5C89B;  
-  --banner-warning-fi: #937A24;
-  --banner-info-bg: #B8DCF5;
-  --banner-info-border: #8FB6D1;  
-  --banner-info-fi: #3C749B;
-  --banner-success-bg: #BAF4BC;
-  --banner-success-border: #94D396;  
-  --banner-success-fi: #309233;
-  --heart: #FF7474;
-  // --goldenRecord: 
-
-  --red300: #F57976; //error-bg
-  --red350: #FF7474; //heart
-  --red400: #D26C69; //error-border
-  --red700: #AD2C29; // error-fi
-  --yellow300: #FFEBA6;
-  --yellow400: #D5C89B;  
-  --yellow700: #937A24;
-  // --yellowXXX -- use this for golden record
-  --blue300: #B8DCF5;
-  --blue400: #8FB6D1;  
-  --blue700: #3C749B;
-  --green300: #BAF4BC;
-  --green400: #94D396;  
-  --green700: #309233;
-  --white: #fff; // banner-close-background
-  --gray400: #B5B5B5; // banner-close-icon
-  // overlay gray -- no shadow here
+  --white: 255, 255, 255; 
+  --black: 0, 0, 0;
+  /*#endregion */
 }
