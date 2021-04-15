@@ -6,6 +6,7 @@ import { QueryClientProvider, QueryClient } from 'react-query'
 import { hexToRgb, rgbToHex } from './helpers/helpers.js';
 
 const colors = ["bannerPrimary","bannerFi","bannerSecondary","contentPrimaryBg","contentPrimaryFi","contentSecondaryBg","contentSecondaryFi","accentBg","accentFi","selectedBg","hyperlink"];
+const staticColors = ["blue","red","yellowGreen","gold","skyBlue","profiseeGreen","coolGray","seaGreen","workspace"];
 
 function App() {
   const queryClient = new QueryClient()
@@ -40,6 +41,9 @@ function useCssVariableUpdate(themeQuery){
       colors.map((color) => {
         return UpdatePaletteCss( themeQuery.data[color], color, root);
       });
+      staticColors.map((color) => {
+        return UpdatePaletteCss( themeQuery.data[color], color, root);
+      });
     }
   }, [themeQuery])
 }
@@ -48,6 +52,7 @@ function ThemeComponent() {
   const [themeName, setThemeName] = useState("default")
   const themeQuery = useTheme(themeName);
   useCssVariableUpdate(themeQuery);
+  const paletteScale = [ "100", "200", "300", "400", "500", "600", "700", "800", "900"]
 
   const changeTheme = React.useCallback(
     () => {
@@ -84,39 +89,24 @@ function ThemeComponent() {
         {/* <svg className="svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg> */}
         </button>
       </div>
+      
+
+
+    <p className="bg-red-500 h-10 w-10 text-bannerSecondary500">test</p>
 
       {colors.map((color) => {
         return (
           <div>
             <p className="pt-3 pb-1 font-semibold text-xs">{color}</p>
             <div key={color} className="flex">
-              <div className={`${color}100 w-20 h-20`}>
-                <p className="text-xs p-1">100</p>  
-              </div>
-              <div className={`${color}200 w-20 h-20`}>
-                <p className="text-xs p-1">200</p>  
-              </div>
-              <div className={`${color}300 w-20 h-20`}>
-                <p className="text-xs p-1">300</p>  
-              </div>
-              <div className={`${color}400 w-20 h-20`}>
-                <p className="text-xs p-1">400</p>  
-              </div>
-              <div className={`${color}500 w-20 h-20`}>
-                <p className="text-xs p-1">500</p>  
-              </div>
-              <div className={`${color}600 w-20 h-20`}>
-                <p className="text-xs p-1">600</p>  
-              </div>
-              <div className={`${color}700 w-20 h-20`}>
-                <p className="text-xs p-1">700</p>  
-              </div>
-              <div className={`${color}800 w-20 h-20`}>
-                <p className="text-xs p-1">800</p>  
-              </div>
-              <div className={`${color}900 w-20 h-20`}>
-                <p className="text-xs p-1">900</p>  
-              </div>
+            
+              {paletteScale.map((scale) => {
+                return (
+                  <div key={`${color}${scale}`} className={`${color}${scale} w-20 h-20`}>
+                    <p className="text-xs p-1">{scale}</p>  
+                  </div>
+                )
+              })}
             </div>
           </div>
         )
