@@ -19,17 +19,12 @@ function App() {
 }
 
 function UpdatePaletteCss(baseHex, cssVarName, documentRoot){
+  const paletteScale = [ "100", "200", "300", "400", "500", "600", "700", "800", "900"]; /***** 50 is broken. I have a ticket in with the library creator */
   let palette = generateColorPalette(rgbToHex(baseHex));
-  // root.style.setProperty("bannerPrimary50", "newval"); /***** 50 is broken. I have a ticket in with the library creator
-  documentRoot.style.setProperty(`--${cssVarName}100`, hexToRgb(palette["100"].hex));
-  documentRoot.style.setProperty(`--${cssVarName}200`, hexToRgb(palette["200"].hex));
-  documentRoot.style.setProperty(`--${cssVarName}300`, hexToRgb(palette["300"].hex));
-  documentRoot.style.setProperty(`--${cssVarName}400`, hexToRgb(palette["400"].hex));
-  documentRoot.style.setProperty(`--${cssVarName}500`, hexToRgb(palette["500"].hex));
-  documentRoot.style.setProperty(`--${cssVarName}600`, hexToRgb(palette["600"].hex));
-  documentRoot.style.setProperty(`--${cssVarName}700`, hexToRgb(palette["700"].hex));
-  documentRoot.style.setProperty(`--${cssVarName}800`, hexToRgb(palette["800"].hex));
-  documentRoot.style.setProperty(`--${cssVarName}900`, hexToRgb(palette["900"].hex));
+
+  paletteScale.forEach((scale) => {
+    documentRoot.style.setProperty(`--${cssVarName}${scale}`, hexToRgb(palette[scale].hex));
+  })
 }
 
 function useCssVariableUpdate(themeQuery){
