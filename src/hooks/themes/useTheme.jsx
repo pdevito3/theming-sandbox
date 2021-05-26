@@ -39,6 +39,16 @@ async function fetchTheme(themeName) {
 }
 
 export default function useTheme(themeId) {
-  return useQuery(themeKeys.theme(themeId), () => fetchTheme(themeId))
+  return useQuery(
+    themeKeys.theme(themeId), 
+    () => fetchTheme(themeId),
+    {
+      failureCount: 3,
+      retryOnMount: false,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false,
+    }
+  )
 }
 
