@@ -1,6 +1,8 @@
 import { useQuery } from 'react-query';
+import { themeKeys } from './themeKeys'
 
 async function fetchTheme(themeName) {
+  // this is really a fetch or axios call
     if(themeName === "default"){
       let theme = {
         "themeName" : "default",
@@ -37,6 +39,6 @@ async function fetchTheme(themeName) {
 }
 
 export default function useTheme(themeId) {
-  return useQuery(['themes', themeId], () => fetchTheme(themeId))
+  return useQuery(themeKeys.theme(themeId), () => fetchTheme(themeId))
 }
 

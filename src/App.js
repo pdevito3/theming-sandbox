@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import useTheme from '../src/hooks/useTheme'
+import useTheme from './hooks/themes/useTheme'
 import generateColorPalette from '../src/hooks/generateColorPalette'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClientProvider, QueryClient } from 'react-query'
